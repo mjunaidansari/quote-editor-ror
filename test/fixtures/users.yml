@@ -1,14 +1,14 @@
-accountant: 
+accountant_kpmg:
   company: kpmg
   email: accountant@kpmg.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
-manager: 
+manager_kpmg:
   company: kpmg
   email: manager@kpmg.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
-accountant: 
+accountant_pwc:
   company: pwc
   email: eavesdropper@pwc.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
