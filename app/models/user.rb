@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   # generate and save new otp secret if doesnt already exist
   def generate_otp_secret
-    self.opt_secret ||= ROTP::Base32.random_base32
+    self.otp_secret ||= ROTP::Base32.random_base32
     save!
   end
 
