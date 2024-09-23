@@ -1,0 +1,17 @@
+<%# app/views/users/sessions/verify_otp.html.erb %>
+<h2>Verify OTP</h2>
+
+<%= form_with(url: users_verify_otp_path, local: true) do |form| %>
+  <div class="field">
+    <%= label_tag :otp_attempt, "Enter your OTP" %>
+    <%= number_field_tag :otp_attempt, nil, required: true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Verify OTP" %>
+  </div>
+
+  <% if flash[:alert] %>
+    <p class="alert"><%= flash[:alert] %></p>
+  <% end %>
+<% end %>
